@@ -1,11 +1,7 @@
 import TerminalController from "./TerminalController";
 
 const App = () => {
-  return (
-    <div>
-      <TerminalController />
-    </div>
-  );
+  return <TerminalController />;
 };
 
 export default App;

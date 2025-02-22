@@ -1,10 +1,13 @@
 import { useState } from "react";
+
 import Terminal, { ColorMode, TerminalOutput } from "react-terminal-ui";
 
 const TerminalController = () => {
   const [terminalLineData, setTerminalLineData] = useState([
     <TerminalOutput key="welcome">
       <h1>Advanced Awareness Assessment</h1>
+    </TerminalOutput>,
+    <TerminalOutput key="welcome">
       <p>Lo-Fi Operation Aptitude Test</p>
       <p>Please Login with your username and password.</p>
     </TerminalOutput>,
@@ -18,6 +21,7 @@ const TerminalController = () => {
         onInput={(terminalInput) =>
           console.log(`New terminal input received: '${terminalInput}'`)
         }
+        height="100vh"
       >
         {terminalLineData}
       </Terminal>
